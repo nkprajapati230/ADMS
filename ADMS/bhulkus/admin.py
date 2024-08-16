@@ -1,3 +1,4 @@
 from django.contrib import admin
+from bhulkus.models import bhulku
 
-# Register your models here.
+admin.site.register(bhulku)
