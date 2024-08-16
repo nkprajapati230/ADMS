@@ -1,3 +1,7 @@
+from django.contrib.auth.models import Group
 from django.contrib import admin
+from leaders.models import Leader
 
-# Register your models here.
+admin.site.register(Leader)
+admin.site.unregister(Group)
+
