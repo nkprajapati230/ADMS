@@ -25,7 +25,7 @@ class Leader(AbstractBaseUser):
 
     @property
     def is_staff(self):
-        return True
+        return True 
 
 
 

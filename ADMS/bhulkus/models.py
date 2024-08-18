@@ -12,3 +12,4 @@ class bhulku(models.Model):
 
     school=models.CharField(max_length=24,null=True)
     address=models.CharField(max_length=24,null=True)
+    

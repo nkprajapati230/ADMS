@@ -19,10 +19,10 @@
                 NSM
             </p>
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Materials</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="{% url "home-page" %}">Home</a></li>
+                <li><a href="{% url "materials-page" %}">Materials</a></li>
+                <li><a href="{% url "contact-page" %}">Contact Us</a></li>
+                <li><a href="{% url "about-page" %}">About Us</a></li>
             </ul>
         </nav>
     </header>
