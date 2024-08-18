@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Jai SwamiNarayan {% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'css/home/base.css' %}">
+    {% block css %}{% endblock css %}
+
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <p>
+                NSM
+            </p>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Materials</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        {% block main_content %}
+
+        {% endblock main_content%}
+    </main>
+
+    <footer>
+        <div>&copy; 2024 My Website. All rights reserved.</div>
+        <div>Develop and Maintain by <b>Nitesh Prajapati</b>.  Contact Developer here 
+            <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a>,
+            <a href="https://linkedin.com/in/yourhandle" target="_blank">LinkedIn</a>,
+            <a href="https://github.com/yourhandle" target="_blank">GitHub</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
