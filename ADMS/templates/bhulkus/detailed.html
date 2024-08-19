@@ -10,12 +10,8 @@
 <main>
         <div class="container">
         <h1>{{ bhulku.first_name }} {{ bhulku.last_name }}</h1>
-        <form id="userForm" method="post">
+        <form id="userForm" method="post" action="/bhulkus/update/{{bhulku.id}}">
             {% csrf_token %}
-            <div class="form-group">
-                <label for="id">ID</label>
-                <input type="text" id="id" name="id" value="{{ bhulku.id }}" disabled>
-            </div>
             <div class="form-group">
                 <label for="first_name">First Name:</label>
                 <input type="text" id="first_name" name="first_name" value="{{ bhulku.first_name }}" disabled>
@@ -34,7 +30,7 @@
             </div>
             <div class="form-group">
                 <label for="dob">Date of Birth:</label>
-                <input type="" id="dob" name="dob" value="{{ bhulku.dob|date:'SHORT_DATE_FORMAT' }}" disabled>
+                <input type="date" id="dob" name="dob" value="{{ bhulku.dob|date:'Y-m-d' }}" disabled>
             </div>
             <div class="form-group">
                 <label for="age">Age:</label>
@@ -61,7 +57,7 @@
             <div class="button-group">
                 <a href="#" class="edit-button" onclick="enableEditing(); return false;">Edit</a>
                 <button type="submit" class="save-button">Save</button>
-                <a href="{% url 'bhulkus-db' %}" class="delete-button">Delete</a>
+                <a href="{% url 'delete-db' bhulku.id %}" class="delete-button">Delete</a>
                 <a href="{% url 'bhulkus-db' %}" class="cancel-button">Cancel</a>
             </div>
         </form>

@@ -11,7 +11,7 @@ class bhulku(models.Model):
     last_name=models.CharField(max_length=24)
 
     standard=models.SmallIntegerField(null=True)
-    dob=models.DateField(null=True)
+    dob=models.DateField(default='2028-06-05')
     age=models.SmallIntegerField(null=True)
 
     school=models.CharField(max_length=24,null=True)

@@ -31,3 +31,48 @@ def bhulkus_db(request,arg=None):
 def detailed(request,id):
     user=bhulku.objects.filter(id=id).first()
     return render(request,'bhulkus/detailed.html',{'bhulku':user})
+
+
+def delete(request,id):
+    user=bhulku.objects.filter(id=id).first()
+    user.delete()
+    return redirect('bhulkus-db')
+
+
+
+def update(request,id):
+    if request.method=='POST':
+        f_name=request.POST.get('first_name')
+        m_name=request.POST.get('middle_name')
+        l_name=request.POST.get('last_name')
+        std=request.POST.get('standard')
+        dob=request.POST.get('dob')
+        age=request.POST.get('age')
+        sch=request.POST.get('school')
+        number=request.POST.get('phone_number')
+        add=request.POST.get('address')
+        reg=request.POST.get('regular')
+        if reg==None:
+            reg=False
+        else:
+            reg=True
+
+        user=bhulku.objects.filter(id=id).first()
+
+        user.first_name=f_name
+        user.middle_name=m_name
+        user.last_name=l_name
+
+        user.standard=std
+        user.dob=dob
+        user.age=age
+        
+        user.school=sch
+        user.phone_number=number
+        user.address=add
+        user.regular=reg
+
+        user.save()
+    return redirect('/bhulkus/detailed/'+str(user.id))
+
+
