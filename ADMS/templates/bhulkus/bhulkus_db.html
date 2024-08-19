@@ -17,7 +17,9 @@
             <th>Phone Number</th>
             <th>Address</th>
             <th>Regular</th>
+            <th>Detail View</th>
         </tr>
+    {% if not status %}
 
         {% for bhlk in bhulku%}
         <tr>
@@ -26,9 +28,52 @@
             <td>{{ bhlk.standard }}</td>
             <td>{{ bhlk.phone_number }}</td>
             <td>{{ bhlk.address }}</td>
-            <td>{{ bhlk.regular }}</td>
+            {% if bhlk.regular %}
+            <td style="background-color:lightgreen"> Yes </td>
+            {% else %}
+            <td style="background-color:#ff5050"> No </td>            
+            {% endif %}
+            <td><a href="{% url "detailed-view" bhlk.id %}">view</a></td>            
         </tr>
         {% endfor %}
+
+    {% endif %}
+
+
+    {% if status %}
+
+        {% for bhlk in bhulku%}
+            {% if bhlk.regular %}
+                <tr>
+                    <td>{{ bhlk.first_name}} {{bhlk.last_name }}</td>
+                    <td>{{ bhlk.age }}</td>
+                    <td>{{ bhlk.standard }}</td>
+                    <td>{{ bhlk.phone_number }}</td>
+                    <td>{{ bhlk.address }}</td>
+                    <td style="background-color:lightgreen">{{ bhlk.regular }}</td>
+                    <td><a href="{% url "detailed-view" bhlk.id %}">view</a></td>            
+                </tr>
+            {% endif %}
+        {% endfor %}
+
+        {% for bhlk in bhulku%}
+            {% if not bhlk.regular %}
+                <tr>
+                    <td>{{ bhlk.first_name}} {{bhlk.last_name }}</td>
+                    <td>{{ bhlk.age }}</td>
+                    <td>{{ bhlk.standard }}</td>
+                    <td>{{ bhlk.phone_number }}</td>
+                    <td>{{ bhlk.address }}</td>
+                    <td style="background-color:#ff5050">{{ bhlk.regular }}</td>
+                    <td><a href="{% url "detailed-view" bhlk.id %}">view</a></td>            
+                </tr>
+            {% endif %}
+        {% endfor %}
+
+    {% endif %}
+
+
+
 
     </table>
     <div class="main-footer">

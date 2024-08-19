@@ -70,3 +70,15 @@ table tr:hover{
 .main-footer button:hover{
     background-color: rgb(37, 182, 240);
 }
+
+tr a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: rgb(0, 0, 0);
+}
+
+tr a:hover{
+    background-color: rgb(32, 189, 233);
+    color:#fff;
+}
+
