@@ -82,10 +82,14 @@
             <a href="#"><button>Edit</button></a>
             <a href="#"><button>Age</button></a>
             <a href="#"><button>Class</button></a>
-            <a href="{% url "bhulkus-db" arg='status' %}"><button>Regular</button></a>
+            <a id='url' onclick="url_change()" href="{% url "bhulkus-db" arg='status' %}"><button>Regular</button></a>
             <a href="{% url "bhulkus-db" %}"><button>Reset</button></a>
         </div>
     </div>
 </main>
 
+
 {% endblock main_content %}
+
+{% block js %}<script src="{% static 'js/bhulkus/bhulkus_db.js'%}"></script>{% endblock js %}
+

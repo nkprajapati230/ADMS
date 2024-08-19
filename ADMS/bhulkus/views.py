@@ -4,14 +4,10 @@ from bhulkus.models import bhulku
 import random
 
 
-status=False
 def bhulkus_db(request,arg=None):
-    global status
-    if arg=='status':
-        if status==True:
-            status=False
-        else:
-            status=True
+    status=False
+    if arg:
+        status=True
     # for i in range(60):
     #     b=bhulku()
     #     try:

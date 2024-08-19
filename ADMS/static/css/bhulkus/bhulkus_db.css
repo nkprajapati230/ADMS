@@ -32,7 +32,7 @@ tr{
     background-color: rgb(59, 133, 186);
 }
 
-table tr:hover{
+table tr:hover {
     cursor: pointer;
     background-color: rgb(160, 160, 255);
 }
