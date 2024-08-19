@@ -3,6 +3,7 @@
 <html lang="en">
 
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %} Jai SwamiNarayan {% endblock title %}</title>
@@ -18,7 +19,7 @@
             <p>
                 NSM
             </p>
-            <ul class="nav-links">
+            <ul class="n_link">
                 <li><a href="{% url "home-page" %}">Home</a></li>
                 <li><a href="{% url "materials-page" %}">Materials</a></li>
                 <li><a href="{% url "contact-page" %}">Contact Us</a></li>
@@ -28,11 +29,11 @@
     </header>
 
 
-    <main>
-        {% block main_content %}
+    {% block main_content %}
+        <main>
 
-        {% endblock main_content%}
-    </main>
+        </main>
+    {% endblock main_content%}
 
     <footer>
         <div>&copy; 2024 My Website. All rights reserved.</div>

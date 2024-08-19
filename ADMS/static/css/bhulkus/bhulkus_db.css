@@ -1,0 +1,72 @@
+
+h1{
+    width: 15rem;
+    margin:0 auto;
+    margin-bottom: 20px;
+    padding: 5px 0;
+    color: #fff;
+    text-align: center;
+    background-color: rgb(0, 183, 255);
+    border-radius: 1rem;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid blue;
+}
+
+th,td{
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid blue;
+}
+
+.head-row{
+    font-size: 1.3rem;
+    background-color: rgb(9, 84, 196);
+}
+
+tr{
+    background-color: rgb(59, 133, 186);
+}
+
+table tr:hover{
+    cursor: pointer;
+    background-color: rgb(160, 160, 255);
+}
+
+.main-footer{
+    padding: 20px 0;
+}
+
+.main-footer p{
+    color: #fff;
+    font-size: 1.6rem;
+}
+
+.main-footer div{
+    margin: 5px 0;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(9, 84, 196);
+    border-radius: 1rem;
+}
+
+.main-footer button{
+    height: 40px;
+    width: 100px;
+    color: #fff;
+    font-size: 1.2rem;
+    background-color: rgb(52, 197, 255);
+    border: 1px solid grey;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px 1px rgb(146, 146, 146);
+}
+
+.main-footer button:hover{
+    background-color: rgb(37, 182, 240);
+}

@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html,body{
+    background-color: #87cefa;
+}
+
 nav,footer {
     height: 65px;
     width: 95vw;
@@ -17,16 +21,16 @@ nav,footer {
     border-radius: 1rem;    
 }
 
-.nav-links{
+.n_link{
     display: flex;
     list-style-type: none;
 }
 
-.nav-links li{
+.n_link li{
     margin: 0 30px;
 }
 
-.nav-links a {
+.n_link a {
     color: #fff;
     text-decoration: none;
     font-size: 1.2rem;
@@ -50,24 +54,21 @@ footer a {
     margin: 0 0.5rem;
 }
 
-footer a:hover, .nav-links a:hover {
+footer div a:hover, .n_link a:hover {
     text-decoration: underline;
     color: #b7b7b7;
 
-}
-
-html,body{
-    background-color: #87cefa;
 }
 
 main{
     min-height: 100vh;
     width: 97vw;
     margin: 0 auto;
+    padding: 20px;
     background-color: #80c9f3;
     border: 1px solid #fff;
     border-radius: 1rem;
     /* box-shadow: 3px 3px 6px 6px green; */
     box-shadow: 0 0 10px 5px #33b1ff;
-
 }
+

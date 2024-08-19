@@ -1,0 +1,46 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title %} Bhulkus Data {% endblock title %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/bhulkus/bhulkus_db.css' %}">{% endblock css %}
+
+{% block main_content %}
+<main>
+    <h1>All Bhulkus</h1>
+    <table>
+
+        <tr class="head-row">
+            <th>Name</th>
+            <th>Age</th>
+            <th>Class</th>
+            <th>Phone Number</th>
+            <th>Address</th>
+            <th>Regular</th>
+        </tr>
+
+        {% for bhlk in bhulku%}
+        <tr>
+            <td>{{ bhlk.first_name}} {{bhlk.last_name }}</td>
+            <td>{{ bhlk.age }}</td>
+            <td>{{ bhlk.standard }}</td>
+            <td>{{ bhlk.phone_number }}</td>
+            <td>{{ bhlk.address }}</td>
+            <td>{{ bhlk.regular }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+    <div class="main-footer">
+        <p>Edit and Filters:</p>
+        <div>
+            <a href="#"><button>Edit</button></a>
+            <a href="#"><button>Age</button></a>
+            <a href="#"><button>Class</button></a>
+            <a href="{% url "bhulkus-db" arg='status' %}"><button>Regular</button></a>
+            <a href="{% url "bhulkus-db" %}"><button>Reset</button></a>
+        </div>
+    </div>
+</main>
+
+{% endblock main_content %}
