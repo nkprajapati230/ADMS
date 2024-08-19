@@ -1,0 +1,75 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    width: 500px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 1rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+}
+
+.login-container input[type="submit"] {
+    width: 25%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-container input[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+
+
+
+.message-box {
+    margin: 20px auto;
+}
+
+.message {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.message.success {
+    color: #4caf50;
+    background-color: #dff0d8;
+}
+
+.message.error {
+    color: #f44336;
+    background-color: #fbe9e7;
+}

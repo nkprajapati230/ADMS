@@ -28,4 +28,3 @@ class Leader(AbstractBaseUser):
         return True 
 
 
-

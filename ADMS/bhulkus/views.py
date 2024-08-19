@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from home import views as vw
+from django.contrib.auth.decorators import login_required
 from bhulkus.models import bhulku
 import random
 
@@ -32,14 +32,14 @@ def detailed(request,id):
     user=bhulku.objects.filter(id=id).first()
     return render(request,'bhulkus/detailed.html',{'bhulku':user})
 
-
+@login_required
 def delete(request,id):
     user=bhulku.objects.filter(id=id).first()
     user.delete()
     return redirect('bhulkus-db')
 
 
-
+@login_required
 def update(request,id):
     if request.method=='POST':
         f_name=request.POST.get('first_name')
@@ -73,6 +73,7 @@ def update(request,id):
         user.regular=reg
 
         user.save()
-    return redirect('/bhulkus/detailed/'+str(user.id))
+
+    return redirect('detailed-view',user.id )
 
 
