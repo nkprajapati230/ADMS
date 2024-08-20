@@ -1,0 +1,50 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block title %}All Leaders{% endblock title %}
+{% block css %}<link rel='stylesheet' href='{% static "css/leaders/leader.css" %}'>{% endblock css %}
+
+{% block main_content %}
+
+
+<main>
+
+    <table>
+
+        <tr class="head-row">
+            <th>Name</th>
+            <th>Designation</th>
+            <th>Phone Number</th>
+            <th>Address</th>
+        </tr>
+
+        <tr>
+            <th>Vidya Bhaiya</th>
+            <th>Software Eng</th>
+            <th>777733930</th>
+            <th>Pune</th>
+        </tr>
+
+        <tr>
+            <th>Manish</th>
+            <th>Content Creator/Graduate/Berojgar</th>
+            <th>907733930</th>
+            <th>Evershine City</th>
+        </tr>
+
+        <tr>
+            <th>Aman</th>
+            <th>Game Devloper</th>
+            <th>908933930</th>
+            <th>Vasai West</th>
+        </tr>
+
+
+    </table>
+
+</main>
+
+
+
+{% endblock main_content %}
+

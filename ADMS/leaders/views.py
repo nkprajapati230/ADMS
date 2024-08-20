@@ -18,3 +18,8 @@ def login_view(request):
             return redirect('login-page')
 
     return render(request, 'leaders/login.html')
+
+
+
+def leaders_view(request):
+    return render(request,'leaders/leader.html')

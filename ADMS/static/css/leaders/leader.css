@@ -1,0 +1,27 @@
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid blue;
+}
+
+th,td{
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid blue;
+}
+
+.head-row{
+    font-size: 1.3rem;
+    background-color: rgb(9, 84, 196);
+}
+
+tr{
+    background-color: rgb(59, 133, 186);
+}
+
+table tr:hover {
+    cursor: pointer;
+    background-color: rgb(160, 160, 255);
+}
