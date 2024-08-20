@@ -7,5 +7,5 @@ urlpatterns = [
     path('all-bhulku/<str:arg>',views.bhulkus_db,name='bhulkus-db'),
     path('detailed/<int:id>',views.detailed,name='detailed-view'),
     path('delete/<int:id>',views.delete,name='delete-db'),
-    path('update/<int:id>',views.update,name='update-db')
+    path('update/<int:id>',views.update,name='update-db'),
 ]

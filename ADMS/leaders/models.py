@@ -28,3 +28,15 @@ class Leader(AbstractBaseUser):
         return True 
 
 
+
+class leadersProfile(models.Model):
+    full_name=models.CharField(max_length=24)
+    profile_pic=models.ImageField(upload_to='media/uploads/images')
+    email=models.EmailField(max_length=255)
+    phone_number=models.PositiveIntegerField()
+    address=models.CharField(max_length=32)
+
+
+
+
+
